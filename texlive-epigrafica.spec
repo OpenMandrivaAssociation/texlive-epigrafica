@@ -1,3 +1,9 @@
+# revision 17210
+# category Package
+# catalog-ctan /fonts/greek/epigrafica
+# catalog-date 2010-02-24 20:55:02 +0100
+# catalog-license gpl
+# catalog-version 1.01
 Name:		texlive-epigrafica
 Version:	1.01
 Release:	1
@@ -99,6 +105,7 @@ of Mathematics of the University of the Aegean, Greece.
 %doc %{_texmfdistdir}/doc/fonts/epigrafica/doc.zip
 %doc %{_texmfdistdir}/doc/fonts/epigrafica/epigrafica.pdf
 %doc %{_texmfdistdir}/doc/fonts/epigrafica/epigrafica.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -109,3 +116,5 @@ of Mathematics of the University of the Aegean, Greece.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
