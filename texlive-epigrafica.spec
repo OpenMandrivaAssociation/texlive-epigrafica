@@ -6,7 +6,7 @@
 # catalog-version 1.01
 Name:		texlive-epigrafica
 Version:	1.01
-Release:	9
+Release:	10
 Summary:	A Greek and Latin font
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/epigrafica
