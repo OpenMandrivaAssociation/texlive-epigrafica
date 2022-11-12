@@ -1,18 +1,12 @@
-# revision 17210
-# category Package
-# catalog-ctan /fonts/greek/epigrafica
-# catalog-date 2010-02-24 20:55:02 +0100
-# catalog-license gpl
-# catalog-version 1.01
 Name:		texlive-epigrafica
-Version:	1.01
-Release:	11
+Version:	17210
+Release:	1
 Summary:	A Greek and Latin font
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/epigrafica
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigrafica.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigrafica.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigrafica.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigrafica.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ Digital Typography and Mathematical Software, of the Department
 of Mathematics of the University of the Aegean, Greece.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -99,24 +93,10 @@ of Mathematics of the University of the Aegean, Greece.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.01-2
-+ Revision: 751491
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.01-1
-+ Revision: 718342
-- texlive-epigrafica
-- texlive-epigrafica
-- texlive-epigrafica
-- texlive-epigrafica
-
