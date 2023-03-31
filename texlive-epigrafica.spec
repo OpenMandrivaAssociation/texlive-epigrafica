@@ -1,6 +1,6 @@
 Name:		texlive-epigrafica
 Version:	17210
-Release:	1
+Release:	2
 Summary:	A Greek and Latin font
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/epigrafica
