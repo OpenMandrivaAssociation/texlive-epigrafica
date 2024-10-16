@@ -3,7 +3,7 @@ Version:	17210
 Release:	2
 Summary:	A Greek and Latin font
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/greek/epigrafica
+URL:		https://www.ctan.org/tex-archive/fonts/greek/epigrafica
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigrafica.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigrafica.doc.r%{version}.tar.xz
